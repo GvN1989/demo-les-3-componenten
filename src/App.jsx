@@ -1,11 +1,11 @@
 import "./styles/global.css";
-import { Heart } from "@phosphor-icons/react";
+import {ArrowRight, Heart} from "@phosphor-icons/react";
+import Button from "./components/Button/Button.jsx";
 
 function App() {
   function handleGetStartedClick() {
     console.log("Get Started button clicked");
   }
-
   function handleLearnMoreClick() {
     console.log("Learn More button clicked");
   }
@@ -42,12 +42,19 @@ function App() {
           </p>
           <div className="wrapper">
             <button
+
               type="button"
               onClick={handleGetStartedClick}
               className="btn btn-primary"
             >
               Get Started
             </button>
+            <Button
+                icon={<ArrowRight size={24} />}
+                variant="primary"
+                handleClick={handleGetStartedClick}
+            >
+              Click Button </Button>
             <button
               type="button"
               onClick={handleLearnMoreClick}
